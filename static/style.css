@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2e;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4caf50;
+}
+
+.section {
+    background-color: #2a2a3b;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.section h2 {
+    margin-top: 0;
+    color: #ff9800;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+input {
+    width: 100vh !important;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="file"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #3b3b4d;
+    color: #fff;
+    font-size: 14px;
+}
+
+button {
+    background-color: #4caf50;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+.actions .button {
+    width: 20vh !important;
+}
+
+button.removeButton {
+    background-color: #f44336;
+}
+
+button.removeButton:hover {
+    background-color: #e53935;
+}

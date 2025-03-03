@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord RPC Manager</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Discord RPC Manager</h1>
+        
+        <section class="section">
+            <h2>Details and State</h2>
+            <form id="rpcForm">
+                <label for="appid">Select Application [<a url="https://discord.com/developers/applications" target="_blank">Dev Portal</a>]:</label>
+                <select id="appid">
+                    {% for app in apps %}
+                        {% for name, id in app.items() %}
+                            <option value="{{ id }}">{{ name }}</option>
+                        {% endfor %}
+                    {% endfor %}
+                </select>
+
+                <label for="details">Details:</label>
+                <input type="text" id="details" name="details">
+
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state">
+
+                <label for="large_text">Large Text:</label>
+                <input type="text" id="large_text" name="large_text">
+            </form>
+        </section>
+
+        <section class="section">
+            <h2>Image Upload</h2>
+            <!-- <label for="large_image">Upload Large Image:</label>
+            <input type="file" id="large_image"> -->
+
+            <label for="image_url">Image URL:</label>
+            <input type="url" id="image_url">
+        </section>
+
+        <section class="section">
+            <h2>Buttons</h2>
+            <div id="buttonsContainer">
+                <div class="button">
+                    <input type="text" name="button_label" placeholder="Button Label">
+                    <input type="url" name="button_url" placeholder="Button URL">
+                    <button type="button" class="removeButton">Remove</button>
+                </div>
+                <button type="button" id="addButton">Add Button</button>
+            </div>
+        </section>
+
+        <div class="actions">
+            <button type="submit" form="rpcForm">Update RPC</button>
+            <button id="terminateRpc">Terminate RPC</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
